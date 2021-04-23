@@ -1,0 +1,36 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            //配置名称，将会在启动配置的下拉菜单中显示
+            "name": "Python",
+            //配置类型
+            "type": "python",
+            //请求配置类型，可以为launch（启动）或attach（附加）
+            //launch: VSCode 会打开这个程序然后进入调试
+            //attach:你已经打开了程序，然后接通内部调试协议进行调试
+            "request": "launch",
+            "stopOnEntry": false,
+            //将要进行调试的程序的路径
+            "program": "${workspaceFolder}/backend/Face_detect/Face_detect.py",
+            //"program": "${workspaceFolder}/ltr/run_training.py",
+            //调试程序时的工作目录，一般为${workspaceRoot}即代码所在目录
+            "cwd": "${workspaceRoot}",
+            "env": {"PYTHONPATH":"${workspaceFolder}"}, // 添加此项才能解决vscode的python运行目录的问题，否则会无法正常引用当前项目目录中的其他文件
+            "envFile": "${workspaceFolder}/.env",
+            // "args": [
+            //     // "--dataset",
+            //     // "OTB2015",
+            //     // "--video",
+            //     // "Girl",
+            //     "--ourvideo",
+            //     "/home/cv/deepTracking/tracking_datasets/612_test/12/12_4",
+            //     "--name",
+            //     "transt"
+            //     // "transt",
+            //     // "transt"
+            // ]
+            
+        }
+    ]
+}
